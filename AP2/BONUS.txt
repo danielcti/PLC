@@ -1,0 +1,15 @@
+A) Como thrice pega apenas uma função, que neste caso é a map, e depois aplica 
+ela três vezes a um certo argumento ele apenas vai esperar a função de entrada (f) e
+o valor de "x" que será usado como entrada para função(x). Com isso, sabemos que
+map f x será executado 3 vezes e a função f será mapeada para cada elemento de x. 
+Dessa forma, concluimos que: (.) thrice map :: (a->a) -> [a] -> [a]
+
+B) Não é possivel afirmar nada, pois dará um erro na interpretação. Já que após o
+swap trocar a ordem das duas funções, o thrice vai estar esperando uma função onde
+o tipo de entrada seja diferente do tipo de saída (a -> b), enquanto o map é da forma (a->a).
+	
+C) Nesse caso também não é possivel afirmar nada devido à um erro na interpretacao. 
+Já que primeiro ela vai receber uma lista e vai pegar apenas o primeiro elemento,
+devido à função head. Após isso, ela vai tentar usar este elemento como entrada 
+da função tail, o que vai retornar um erro para o usuário, uma vez que esta funcão 
+espera novamente uma lista.
